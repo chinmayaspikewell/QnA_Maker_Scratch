@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,600,700');
+
+
+body {
+    height: 100vh;
+    background: #f9f9f9;
+}
+.main{
+    margin-top: 30px;
+    width: 100%;
+    flex: 4;
+}
+
+.analytics {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top:30px;
+  }
+  .featuredItemAnalytics {
+    flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 14px 3px rgba(0,0,0,0.45); 
+  box-shadow: 5px 5px 14px 3px rgba(0,0,0,0.45);
+    z-index:10;
+  }
+  
+  .featuredTitle{
+      font-size: 20px;
+  }
+  
+  .featuredMoneyContainer{
+      margin: 10px 0px;
+      display: flex;
+      align-items: center;
+  }
+  

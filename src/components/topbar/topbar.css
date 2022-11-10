@@ -1,0 +1,89 @@
+.topbar {
+  width: 100vw;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  -webkit-box-shadow: 5px 5px 14px 3px rgba(0,0,0,0.45); 
+  box-shadow: 5px 5px 14px 3px rgba(0,0,0,0.45);
+}
+
+.topbarWrapper {
+  height: 100%;
+  padding: 0px 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 28px;
+  padding-top: -50px;
+  color: darkblue;
+  cursor: pointer;
+}
+
+.topRight{
+    display: flex;
+    align-items: center;
+    
+}
+
+.topbarIconContainer {
+  position: relative;
+  cursor: pointer;
+  /* margin-right: 10px; */
+  color: #555;
+}
+
+.topIconBadge{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.topAvatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.test{
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+@media screen and (max-width: 720px) {
+ .topbar{
+   width: 100vw;
+ }
+
+}
+@media screen and (max-width: 350px) {
+  .logo{
+    font-size: 23px; 
+   }
+  .test{
+     
+    border-radius: 7px !important;
+    padding: 5px 5px !important;
+    margin-right: 10px !important;
+
+   }
+}

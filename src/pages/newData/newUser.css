@@ -1,0 +1,151 @@
+
+.newUser1 {
+  flex: 4;
+}
+
+.userUpdate1 {
+  flex: 4;
+  color:rgba(245, 168, 13, 0.4);
+  text-align: center;
+}
+.indexPage1 {
+  display: flex;
+  position :fixed;
+  bottom: 15px;
+  right :-97%;
+  width: 100%;
+  align-items: right;
+  color: #535050;
+}
+
+.newUserForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newUserItem {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.newUserItem > label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(151, 150, 150);
+}
+
+.newUserItem > input {
+  height: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.newUserGender > input {
+  margin-top: 15px;
+}
+
+.newUserGender>label{
+    margin: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.newUserSelect{
+    height: 40px;
+    border-radius: 5px;
+}
+
+.newUserButton{
+    width: 200px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    padding: 7px 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 720px) {
+  .sidebar{
+    display: none;
+  }
+  .newUserForm {
+    display: flex;
+    flex-wrap: wrap;
+    padding: none;
+  }
+  
+  .newUser {
+    flex: 4;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    padding: 50px;
+    /* margin-left: -10px; */
+    overflow: hidden;
+    height:90vh;
+  }
+
+  .indexPage1 {
+    display: flex;
+    position :absolute;
+    bottom: 20%;
+    right :-90%;
+  }
+
+.newUserButton{
+margin-left: 40%;
+}
+.newUserTitle{
+font-size: 100%;
+}
+.newUser1{
+margin-top:10%;
+}
+.userUpdate1 {
+flex: 4;
+font-size: 10px;
+text-align: center;
+min-height: 10vh;
+min-width:40%;
+width: 50%;
+}
+.test{
+border: none;
+border-radius: 10px;
+padding: 5px 10px;
+align-items: center;
+margin-left: 10%;
+}
+#question{
+width: 80%;
+}
+
+.newUserItem {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.newUserItem > label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(151, 150, 150);
+}
+
+.newUserItem > input {
+  height: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+}

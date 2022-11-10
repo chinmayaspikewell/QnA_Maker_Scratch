@@ -1,0 +1,105 @@
+.QnA {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .QnA-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.QnA-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.QnA-link {
+  color: #61dafb;
+}
+
+@keyframes QnA-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sidebar {
+    flex: 0.7;
+    height: calc(100vh - 50px);
+    background-color:#001529;
+    position: sticky;
+    top: 50px;
+    margin-top:-20px;
+    padding-top: 20px;
+    
+  }
+  
+  .sidebarWrapper {
+    padding: 20px 20px 20px 20px;
+    color: #555;
+  }
+  
+  .sidebarMenu {
+    margin-bottom: 10px;
+  }
+  
+  .sidebarTitle {
+    font-size: 13px;
+    color: rgb(187, 186, 186);
+    padding: 5px;
+    
+  }
+  
+  .sidebarList {
+    list-style: none;
+    padding: 5px;
+  }
+  
+  .sidebarListItem {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  } 
+  .test{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .sidebarListItem.active{
+    background-color: rgb(238, 177, 11);
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .sidebarListItem:hover {
+    background-color: rgb(240, 240, 255);
+  }
+  
+  .sidebarIcon{
+      margin-right: 5px;
+     /** font-size: 20px !important;**/
+     font-size: large;
+  }
+  

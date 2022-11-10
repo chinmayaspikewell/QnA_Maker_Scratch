@@ -1,0 +1,162 @@
+
+.userList {
+  flex: 4;
+  padding-top: 30px;
+  /* height: 1400; */
+  width: '100%';
+  
+}
+
+/* .indexPage {
+  display: flex;
+  position :fixed;
+  bottom: 1%;
+  right :-75%;
+  width: 100%;
+  align-items: right;
+  color: #535050;
+} */
+.spinner{
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+.userListUser {
+  display: flex;
+  /* margin-top:-100px; */
+  text-decoration:none ;
+}
+
+.newUser {
+  flex: 4;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+}
+.newUserTitle{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.topbarIconContainer{
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+.userUpdate2{
+  flex: 4;
+  text-align: center;
+  color: #fff;
+  margin: auto;
+  border:none;
+  /* background-color: #282c34; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: center;
+  width: 50%;
+  border-radius: 10px;
+  margin-left: 40%;
+
+}
+.userUpdate1 {
+  flex: 4;
+  text-align: center;
+  color: #fff;
+  margin: auto;
+  background-color: #282c34;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.79);
+-webkit-box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.79);
+-moz-box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.79);
+}
+.userListImg {
+  margin-top:-100px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.add{
+  cursor: pointer;
+  display: 'flex';
+  align-items: 'left';
+  flex-wrap: 'wrap';
+}
+.userListEdit{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.userListDelete{
+    color: red;
+    cursor: pointer;
+    margin :-6px;
+}
+
+
+.inactive{
+    border-radius:12px;
+    color: white;
+    background: #FF8500;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    margin-right: 20px;
+}
+    
+.active{
+  border-radius: 12px;
+  color: white;
+  background: #075f04 ;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  margin-right: 20px;
+}
+ .MuiDataGrid-cell {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  }
+
+  .MuiDataGrid-cellWithRenderer.MuiDataGrid-cell.MuiDataGrid-cellLeft{
+    min-width: 150px;max-width: 150px;
+    line-height: normal !important;
+    min-height: 200px;max-height: 200px;
+  }
+  /* .userListUser{
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    /* min-width: 150px;max-width: 150px; */
+    /* line-height: 0 !important; */
+ /*   min-height: 200px !important;max-height: 200px !important;
+  } */
+@media only screen and (max-width:480px){
+ /* .DataGrid{
+  display:flex;
+ } */
+
+ .MuiDataGrid-cellWithRenderer.MuiDataGrid-cell.MuiDataGrid-cellLeft{
+  line-height: 100px !important;
+}
+
+.MuiDataGrid-cellWithRenderer.MuiDataGrid-cell.MuiDataGrid-cellCenter{
+  line-height: 100px !important;
+}
+.MuiDataGrid-cell{
+  height:100px;
+}
+
+}
+  

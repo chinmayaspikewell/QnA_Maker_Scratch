@@ -1,0 +1,351 @@
+.newUser {
+  flex: 4;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  /* overflow: hidden; */
+  
+}
+.newUserTitle{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.sidebar{
+  position: fixed;
+}
+
+.topbarIconContainer{
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+.userUpdate1 {
+  flex: 4;
+  text-align: center;
+  color: #fff;
+  align-items: center;
+  margin: auto;
+  background-color: #282c34;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.79);
+-webkit-box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.79);
+-moz-box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.79);
+}
+
+.userContainer {
+  display: flex;
+  margin-top: 20px;
+}
+
+.userShow {
+  flex: 1;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.userUpdate {
+  flex: 2;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  /* margin-left: 20px; */
+}
+
+.userShowTop {
+  display: flex;
+  align-items: center;
+}
+
+.userShowImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userShowTopTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.userShowUsername {
+  font-weight: 600;
+}
+
+.userShowUserTitle {
+  font-weight: 300;
+}
+
+.userShowBottom{
+    margin-top: 20px;
+}
+
+.userShowTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(175, 170, 170);
+}
+
+.userShowInfo{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    color: #444;
+}
+
+.userShowIcon{
+    font-size: 16px !important;
+}
+
+.userShowInfoTitle{
+    margin-left: 10px;
+}
+
+.userUpdateTitle{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.userUpdateForm{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.userUpdateItem{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.userUpdateItem>label{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.userUpdateInput{
+    border: none;
+    width: 250px;
+    height: 30px;
+    border-bottom: 1px solid gray;
+}
+
+.userUpdateRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.newUserItem2{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.userUpdateUpload{
+    display: flex;
+    align-items: center;
+}
+
+.userUpdateImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.userUpdateIcon{
+    cursor: pointer;
+}
+
+.userUpdateButton{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+}
+
+.sidebar {
+    flex: 0.7;
+    height: calc(100vh - 50px);
+    background-color:#001529;
+    position: sticky;
+    top: 50px;
+    margin-top:-20px;
+    padding-top: 20px;
+    
+  }
+  
+  .sidebarWrapper {
+    padding: 20px 20px 20px 20px;
+    color: #555;
+  }
+  
+  .sidebarMenu {
+    margin-bottom: 10px;
+  }
+  
+  .sidebarTitle {
+    font-size: 13px;
+    color: rgb(187, 186, 186);
+    padding: 5px;
+    
+  }
+  
+  .sidebarList {
+    list-style: none;
+    padding: 5px;
+  }
+  
+  .sidebarListItem {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  } 
+  .test{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .sidebarListItem.active{
+    background-color: rgb(238, 177, 11);
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .sidebarListItem:hover {
+    background-color: rgb(240, 240, 255);
+  }
+  
+  .sidebarIcon{
+      margin-right: 5px;
+     /** font-size: 20px !important;**/
+     font-size: large;
+  }
+  .indexPage1 {
+    display: flex;
+    position :fixed;
+    bottom: 1%;
+    right :-97%;
+    width: 100%;
+    align-items: right;
+    color: #535050;
+  }
+  .loaderAlign{
+    margin-left: 45% ;
+  }
+  @media only screen and (min-width :721px) and (max-width:1080px){
+    .loaderAlign{
+      margin-left: 35% ;
+    }
+  }
+  @media only screen and (max-width: 720px) {
+     
+    .newUserButton{
+      margin-top: 2%;
+      margin-left: 9%;
+    }
+    .newUserItem2{
+      width: auto;
+    }
+    .loaderAlign{
+      margin-left: 35%;
+      /* top: 45%;
+      bottom: 45%; */
+    }
+    .userUpdate1{
+      width: 90%;
+      margin-top: 3%;
+    }
+    /* .newUserButton{
+      margin-top: 2%;
+      margin-left: 9%;
+    }
+    .userUpdate2{
+
+    }
+    .userUpdate1{
+      width: 90%;
+      margin-top: 3%;
+    }
+    .newUserItem{
+      width:auto;
+    } */
+
+    /* .newUser{
+      overflow: hidden;
+    }
+    .sidebar{
+      display: none;
+    }
+    .newUser {
+      flex: 4;
+      padding: 50px;
+      margin-left: -10px;
+    }
+  
+.newUserButton{
+  margin-left: 10%;
+}
+.newUserTitle{
+  font-size: 100%;
+}
+.newUser1{
+  margin-top:10%;
+}
+.userUpdate1 {
+  flex: 4;
+  font-size: 10px;
+  text-align: center;
+  min-height: 10vh;
+  min-width:40%;
+  width: 50%;
+}
+.test{
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  align-items: center;
+  margin-left: 10%;
+}
+.indexPage1 {
+  display: flex;
+  position :fixed;
+  
+  right :-90%;
+  width: 100%;
+  align-items: right;
+  color: #535050;
+} */
+
+
+}
+
+@media only screen and (max-width: 720px) {
+     
+  .newUserButton{
+    margin-top: 2%;
+    margin-left: 9%;
+  }
+}
