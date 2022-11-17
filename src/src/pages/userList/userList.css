@@ -3,7 +3,7 @@
   flex: 4;
   padding-top: 30px;
   /* height: 1400; */
-  width: '100%';
+  width: 100%;
   
 }
 
@@ -18,9 +18,7 @@
 } */
 .spinner{
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 }
 .userListUser {
@@ -130,33 +128,50 @@
   word-wrap: break-word !important;
   }
 
+  .MuiDataGrid-columnHeaderTitle {
+    font-weight: 600 !important;
+  }
+
   .MuiDataGrid-cellWithRenderer.MuiDataGrid-cell.MuiDataGrid-cellLeft{
     min-width: 150px;max-width: 150px;
     line-height: normal !important;
     min-height: 200px;max-height: 200px;
   }
-  /* .userListUser{
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    /* min-width: 150px;max-width: 150px; */
-    /* line-height: 0 !important; */
- /*   min-height: 200px !important;max-height: 200px !important;
-  } */
+  
 @media only screen and (max-width:480px){
- /* .DataGrid{
-  display:flex;
- } */
 
- .MuiDataGrid-cellWithRenderer.MuiDataGrid-cell.MuiDataGrid-cellLeft{
-  line-height: 100px !important;
+  /* .MuiDataGrid-columnHeaderSortable.MuiDataGrid-columnHeaderSorted.MuiDataGrid-columnHeader{
+    padding:0px 2px !important;
+  } */
+  .userListDelete{
+    margin :-6px;
 }
 
-.MuiDataGrid-cellWithRenderer.MuiDataGrid-cell.MuiDataGrid-cellCenter{
-  line-height: 100px !important;
+.userListEdit{
+  border-radius: 8px;
+  padding: 6px 6px;
+  margin-right: 10px;
 }
-.MuiDataGrid-cell{
-  height:100px;
+ /* .MuiDataGrid-cellWithRenderer.MuiDataGrid-cell.MuiDataGrid-cellLeft{
+  min-height: 100px !important;
+  max-height: 100px !important;
+} */
+
+/* .MuiDataGrid-cellWithRenderer.MuiDataGrid-cell.MuiDataGrid-cellLeft{
+  min-width:150px !important ;max-width:150px !important;
+  line-height: normal !important;
 }
+.MuiDataGrid-columnHeaderTitleContainer{
+  min-width: 110px !important ;max-width:110px !important;
+}
+
+.MuiDataGrid-columnHeaderSortable.MuiDataGrid-columnHeader{
+  min-width: 150px !important ;max-width: 150px !important;
+} */
+
+/* .MuiDataGrid-dataContainer.data-container{
+  min-width: 270vw !important ;max-width: 300vw !important;
+} */
 
 }
   

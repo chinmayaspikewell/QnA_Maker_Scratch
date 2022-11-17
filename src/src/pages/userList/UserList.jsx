@@ -143,8 +143,14 @@ const handleChangeRowsPerPage = (event) => {
     x.setAttribute("value", "Hello");
     document.body.appendChild(x);
 }*/
-  const columns = [
-    { field: "id", headerName: "ID", width: 90,
+let columns=[];
+let width = window.innerWidth;
+if(width>480 && width<1200){
+  columns = [
+   
+    { field: "id", headerName: "ID",
+    // flex:1,
+    width: 90,
     renderCell: (params) => {
       return (
         <>
@@ -159,7 +165,9 @@ const handleChangeRowsPerPage = (event) => {
     {
       field: "question.questionData",
       headerName: "Question",
-      width: 400,
+       width: 400,
+      //minWidth:100,
+      // flex:3,
       filterable: true,
      // editable:true,
       valueParser: (params) => {
@@ -181,8 +189,11 @@ const handleChangeRowsPerPage = (event) => {
     {
       field: "answer",
       headerName: "Answer",
-      width: 400,
+      //minWidth: 50,
+       width: 400,
+
       filterable: true,
+
       //editable:true,
       renderCell: (params) => {
         return (
@@ -203,7 +214,9 @@ const handleChangeRowsPerPage = (event) => {
    { 
       field: "metaData",
       headerName: "MetaData",
-      width: 150,
+      //minWidth: 90,
+      width: 200,
+   
       renderCell: (params) => {
         return (
           <>
@@ -223,7 +236,9 @@ const handleChangeRowsPerPage = (event) => {
     {
       field: "status",
       headerName: "Status",
-      width: 120,
+      //minWidth: 90,
+       width: 120,
+    
       //editable:true,
       renderCell: (params) => {
         if (params.row.status === false){
@@ -245,7 +260,9 @@ const handleChangeRowsPerPage = (event) => {
     {
       field: "action",
       headerName: "Action",
-      width: 150,
+      //minWidth: 100,
+       width: 120,
+  
       renderCell: (params) => {
         return (
           <div className="userListDelete2">
@@ -262,6 +279,276 @@ const handleChangeRowsPerPage = (event) => {
       },
     },
   ];
+}
+else if (width < 480) {
+  columns = [
+   
+    { field: "id", headerName: "ID",
+    // flex:1,
+    width: 89,
+    renderCell: (params) => {
+      return (
+        <>
+        <div className="userListUser">
+         {params.row.id}
+        </div>
+
+        </>
+      );
+    },
+  },
+    {
+      field: "question.questionData",
+      headerName: "Question",
+       width: 132,
+      //minWidth:100,
+      // flex:3,
+      filterable: true,
+     // editable:true,
+      valueParser: (params) => {
+        return params.data;
+      },
+      renderCell: (params) => {
+        var d = params.row.question
+        return (
+          <>
+          <div className="userListUser"  onDoubleClick={()=> addBalHandler(params.row.id,params.row.question.questionData,params.row.answer.answerData,params.row.question.modifiedOn,params.row.question.modifiedBy)}>
+            {d.questionData}      
+            
+          </div>
+         
+           </>
+        );
+      },
+    },
+    {
+      field: "answer",
+      headerName: "Answer",
+      //minWidth: 50,
+       width: 132,
+
+      filterable: true,
+
+      //editable:true,
+      renderCell: (params) => {
+        return (
+          <>
+            <div  className="userListUser" onDoubleClick={()=> addBalHandler(params.row.id,params.row.question.questionData,params.row.answer.answerData,params.row.answer.modifiedOn,params.row.answer.modifiedBy)}>
+            {params.row.answer.answerData} 
+
+            </div>
+            <div className="userListUser">
+            <div id="list">
+            </div>
+            </div>
+            </>
+        );
+      },    
+    },
+
+   { 
+      field: "metaData",
+      headerName: "MetaData",
+      //minWidth: 90,
+      width: 140,
+   
+      renderCell: (params) => {
+        return (
+          <>
+          <div className="userListUser">
+            {params.row.metaData}
+            {/* { <DeleteOutline onClick={() => confirmDelete(params.row.metaData.uid)}/>} */}
+          </div>
+          <div className="userListUser">
+          {params.row.metaData.recid}
+        </div>
+         </>          
+        );
+      },
+    },
+   
+    
+    {
+      field: "status",
+      headerName: "Status",
+      //minWidth: 90,
+       width: 115,
+    
+      //editable:true,
+      renderCell: (params) => {
+        if (params.row.status === false){
+        return (
+          <div  className="userListUser">
+              <button className="inactive" >inactive</button>
+          </div>
+        );       
+      }
+      else{
+        return(
+          <div className="userListUser">
+              <button className="active" >active</button>
+          </div>
+        );
+      }
+  },
+  },
+    {
+      field: "action",
+      headerName: "Action",
+      //minWidth: 100,
+       width: 120,
+  
+      renderCell: (params) => {
+        return (
+          <div className="userListDelete2">
+            <Link to={"/user/" + params.row.id}>
+              <button className="userListEdit">Edit</button>
+            </Link>
+            <DeleteOutline
+              className="userListDelete"
+              
+              onClick={() => confirmDelete(params.row.id)}
+            />
+          </div>
+        );
+      },
+    },
+  ];
+}else{
+   columns = [
+   
+    { field: "id", headerName: "ID",
+    // flex:1,
+    width: 100,
+    renderCell: (params) => {
+      return (
+        <>
+        <div className="userListUserSl">
+         {params.row.id}
+        </div>
+
+        </>
+      );
+    },
+  },
+    {
+      field: "question.questionData",
+      headerName: "Question",
+       width: 500,
+      //minWidth:100,
+      // flex:3,
+      filterable: true,
+     // editable:true,
+      valueParser: (params) => {
+        return params.data;
+      },
+      renderCell: (params) => {
+        var d = params.row.question
+        return (
+          <>
+          <div className="userListUser"  onDoubleClick={()=> addBalHandler(params.row.id,params.row.question.questionData,params.row.answer.answerData,params.row.question.modifiedOn,params.row.question.modifiedBy)}>
+            {d.questionData}      
+            
+          </div>
+         
+           </>
+        );
+      },
+    },
+    {
+      field: "answer",
+      headerName: "Answer",
+      //minWidth: 50,
+       width: 500,
+
+      filterable: true,
+
+      //editable:true,
+      renderCell: (params) => {
+        return (
+          <>
+            <div  className="userListUser" onDoubleClick={()=> addBalHandler(params.row.id,params.row.question.questionData,params.row.answer.answerData,params.row.answer.modifiedOn,params.row.answer.modifiedBy)}>
+            {params.row.answer.answerData} 
+
+            </div>
+            <div className="userListUser">
+            <div id="list">
+            </div>
+            </div>
+            </>
+        );
+      },    
+    },
+
+   { 
+      field: "metaData",
+      headerName: "MetaData",
+      //minWidth: 90,
+      width: 250,
+   
+      renderCell: (params) => {
+        return (
+          <>
+          <div className="userListUser">
+            {params.row.metaData}
+            {/* { <DeleteOutline onClick={() => confirmDelete(params.row.metaData.uid)}/>} */}
+          </div>
+          <div className="userListUser">
+          {params.row.metaData.recid}
+        </div>
+         </>          
+        );
+      },
+    },
+   
+    
+    {
+      field: "status",
+      headerName: "Status",
+      //minWidth: 90,
+       width: 120,
+    
+      //editable:true,
+      renderCell: (params) => {
+        if (params.row.status === false){
+        return (
+          <div  className="userListUser">
+              <button className="inactive" >inactive</button>
+          </div>
+        );       
+      }
+      else{
+        return(
+          <div className="userListUser">
+              <button className="active" >active</button>
+          </div>
+        );
+      }
+  },
+  },
+    {
+      field: "action",
+      headerName: "Action",
+      //minWidth: 100,
+       width: 120,
+  
+      renderCell: (params) => {
+        return (
+          <div className="userListDelete2">
+            <Link to={"/user/" + params.row.id}>
+              <button className="userListEdit">Edit</button>
+            </Link>
+            <DeleteOutline
+              className="userListDelete"
+              
+              onClick={() => confirmDelete(params.row.id)}
+            />
+          </div>
+        );
+      },
+    },
+  ];
+}
   return (
     <>
     {load ? (
@@ -290,14 +577,15 @@ const handleChangeRowsPerPage = (event) => {
         //sx={{height: { md: 450, xs: 350 }, width: '35%',}}
         pageSize={pageSize}
         onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
+        // rowsPerPageOptions={[5, 10, 20]}
+        // pagination
         rows={tableData}
         disableSelectionOnClick
         columns={columns}
         rowHeight={200}
         //pageSize={8}
-        checkboxSelection 
         //page={page}
-        pagination
+
         onPageChange={handleChangePage}
         // rowsPerPage={rowsPerPage}
         // onRowsPerPageChange={handleChangeRowsPerPage}
@@ -306,8 +594,14 @@ const handleChangeRowsPerPage = (event) => {
         rowsCount={tableData.count}
         onGridRowsUpdated={onGridRowsUpdated}
         enableCellSelect={true}
+        //checkboxSelection={true}
       />
-      {/* <div class="indexPage">
+      {/* 
+        pageSize={pageSize}
+        onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
+        rowsPerPageOptions={[5, 10, 20]}
+        pagination
+      <div class="indexPage">
  
             <Link to="/">
             
